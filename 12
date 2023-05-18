@@ -1,0 +1,157 @@
+#include<stdio.h>
+int main(void)
+{
+    int s,e;
+    while (1){
+        scanf("%d %d", &s, &e);
+    
+    if((s>=2 && s<=9) && (e>=2 && e<=9)){
+        break;
+    
+    }
+    else{
+        printf("INPUT ERROR!\n");
+    }
+}
+if(s>e){
+    for(int i=1;i<10; i++){
+        for(int j=s;j<=e; j++){
+        printf("%d * %d = %2d", j,i,i*j);
+    }
+    printf("\n");
+
+}
+}
+else{
+    for(int i=1; i<=9; i++){
+        for(int j=s; j>=e; j--){
+            printf("%d * %d =%2d", j,i,i*j);
+        }
+        printf("\n");
+    }
+}
+}
+
+
+
+#include<stdio.h>
+
+int main (void)
+{
+    printf("구구단");
+    int x;
+    scanf("%d", &x);
+    int i, pr;
+    for(int i=1;i<=10; i++)
+    {
+        pr=i*x;
+        printf("%d*%d=%d\n",x,i,pr);
+        
+    }
+    return 0;
+}
+
+
+
+
+
+
+#include<stdio.h>
+
+int main(void)
+{
+    int scorel[5];
+    for(int i=0; i<=4;i++)
+    {
+        scorel[i]=10;
+    }
+}
+
+
+
+#include<stdio.h>
+#define STUDENTS 10
+
+int main(void)
+{
+    int scores[STUDENTS];
+    int sum =0;
+    int i, average;
+
+    for(i=0; i<STUDENTS; i++)
+    {
+        printf("학샐들의 성적을 입력하세요:");
+        scanf("%d", &scores[i]);
+    }
+    for(i=0;i<STUDENTS; i++)
+    sum +=scores[i];
+
+    average =sum / STUDENTS;
+    printf("성적 평균=%d\n", average);
+
+    return 0;
+   }
+   
+   
+   
+   
+   #include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#define SIZE 5
+
+int main(void)
+{
+    int i;
+    int scores[SIZE];
+
+    srand((unsigned)time (NULL));
+    for(i=0; i<SIZE; i++)
+    scores[i]=rand()%100;
+
+    for(i=0; i<SIZE; i++)
+    printf("scores[%d]=%d\n", i, scores[i]);
+    return 0;
+}
+
+
+
+#include<stdio.h>
+#define STUDENTS 10
+
+int main(void)
+{
+    int scores[STUDENTS];
+    int sum =0;
+    int i, average;
+
+    for(i=0; i<=4; i++)
+    {
+        printf("학샐들의 성적을 입력하세요:");
+        scanf("%d", &scores[i]);
+    }
+    for(i=0;i<=4; i++)
+    sum +=scores[i];
+
+    average =sum / 5;
+    printf("성적 평균=%d\n", average);
+
+    return 0;
+}
+
+
+
+
+#include<stdio.h>
+
+int main (void)
+{
+    int scores[]={1,2,3,4,5,6};
+    int i,size;
+
+    size= sizeof(scores)/ sizeof(scores[0]);
+
+    for(i=0;i<size;i++)
+    printf("%d", scores[i]);
+    return 0;
+}
