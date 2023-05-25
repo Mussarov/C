@@ -1,0 +1,141 @@
+#include<stdio.h>
+
+int main (void)
+{
+    char*pc;
+    int *pi;
+    double *pd;
+
+
+    pc=(char*)10000;
+    pi=(int*)10000;
+    pd=(double*)10000;
+    printf("pc=%u,pc+1=%u, pc+2=%u\n", pc, pc+1,pc+2);
+    printf("pi=%u, pi+1=%u, pi+2=%u\n", pi,pi+1,pc+1,pc+2);
+    printf("pd=%u, pd+1=%u,pd+2=%u\n", pd,pd+1,pd+2);
+
+    return 0;
+}
+
+#include<stdio.h>
+
+int main(void)
+{
+    int i=10;
+    int *p;
+
+    p=&i;
+    printf("i=%d\n", i);
+
+    *p=20;
+    printf("i=%d\n", i);
+    return 0;
+}
+
+#include<stdio.h>
+
+int main (void)
+{
+    int x=10,y=20;
+    int *p;
+
+    p=&x;
+    printf("p=%p\n", p);
+    printf("*p=%u\n\n",*p);
+
+    p=&y;
+    printf("p=%p\n", p);
+    printf("*p=%u\n", *p);
+    return 0;
+}
+
+#include<stdio.h>
+int main (void)
+{
+    int i=300;
+    int *p=NULL;
+
+    p=&i;
+    printf("p=%p\n", p);
+    printf("&i=%p\n\n", &i);
+    printf("i=%d\n", i);
+    printf("p=%d\n", *p);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+int main(void) {
+    
+int i = 10;
+double f = 12.3; 
+int* pi = NULL;
+double* pf = NULL;
+
+pi = &i;
+pf = &f;
+
+printf("%p %p \n", pi, &i); 
+printf("%p %p \n", pf, &f);
+
+return 0;
+}
+
+#include <stdio.h>
+
+int main(void) {
+  int a, b, c, i, j, n[10] = {0};
+  long long int product;
+
+  scanf("%d %d %d", &a, &b, &c);
+  product = a * b * c;
+
+  for (i = 0; i < 10; i++) {
+    for (j = 0; j < 10; j++) {
+      if (product % 10 == i) {
+        n[i]++;
+      }
+      product /= 10;
+    }
+  }
+
+  for (i = 0; i < 10; i++) {
+    printf("%d ", n[i]);
+  }
+
+  return 0;
+}
+
+#include<stdio.h>
+
+int main(void)
+{
+    int a=150, b=266, c=427, sum=0, count=0;
+    char t[10]={0};
+
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf("%d", &c);
+
+  sum =a*b*c;
+  printf("sum:%d\n", sum);
+
+  while (1)
+  {
+    count = sum % 10;
+    t[count]+=1;
+    sum/=10;
+
+    if(sum==0)
+    {
+        break;
+    }
+  }
+  for(int i=0;i<10;i++)
+  {
+    printf("%d\n", t[i]);
+  }
+  return 0;
+  
+}
